@@ -1,0 +1,27 @@
+Burada istifadəçidən username istənilir. Əgər username öz istifadəçi adına bərabərdirsə, şifrəsini daxil edir və 3 cəhd şansı var şifrəni daxil etmək üçün. 
+Əgər hər 3 şifrə şansını istifadə etsə proqram dayanır. 
+Username yanlış olarsa username yanlışdır cavabı qayıdır.
+
+
+cehd = 3
+dogru_username = "melek12"
+dogru_sifre = 1234
+username = input("Enter your username:")
+if username==dogru_username:
+    sifreniz = int(input("Enter your password:"))
+    if sifreniz==dogru_sifre:
+        print("Sehifeye giris edirsiniz")
+    else:
+        print(f"Parol yanlisdir, {cehd-1} cehdiniz qaldi")
+        sifreniz = int(input("Yeni sifre daxil edin:"))
+        if sifreniz == dogru_sifre:
+            print("Sehife gire bilersiniz")
+        else:
+            print(f"Parol yanlisdir, {cehd-2} cehdiniz qaldi")
+            sifreniz = int(input("Yeni sifreni daxil edin:"))
+            if sifreniz == dogru_sifre:
+                print("Sehifeye giris edin.")
+            else:
+                print(f"Parol yanlisdir, {cehd-3} cehdiniz qaldi")
+else :
+    print("Username yalnisdir")
