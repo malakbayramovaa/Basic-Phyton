@@ -1,0 +1,15 @@
+# random modulu ilə 1–100 arasında gizli ədəd seç və istifadəçidən tapmasını istə (guessing game).
+import random
+def guessing_game():
+    gizli = random.randint(1, 100)
+    print("1–100 arasında bir ədəd seçmişəm. Tapmağa çalış!")
+    while True:
+        texmin = int(input("Texmininiz: "))
+        if texmin < gizli:
+            print("Çox kiçikdir! Yenidən cəhd et.")
+        elif texmin > gizli:
+            print("Çox böyüklüdür! Yenidən cəhd et.")
+        else:
+            print("Təbriklər! Doğru tapdınız! 🎉")
+            break
+guessing_game()
