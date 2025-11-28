@@ -1,0 +1,137 @@
+# Question 1:
+# n=5
+# *    
+# **   
+# ***  
+# ****  
+# ***** 
+n=int(input("N deyerini daxil edin:"))
+for i in range(1, n+1):
+    print("*" * i);
+
+#Question 2:
+# n=5
+*****
+****
+***
+**
+*
+n=int(input("N deyerini daxil edin:"))
+for i in range(n, 0, -1):
+    print("*" * i);
+
+Question 3:
+# *****
+# *****
+# *****
+# *****
+# *****
+n= int(input("n deyerini daxil edin:"))
+for i in range(1,n+1):   #row ucun
+    for j in range(1, n+1):  # column ucun
+        print("*", end="")
+    print();
+
+Question 4:
+# n=5
+#     *  
+#    **   
+#   ***   
+#  ****   
+# ***** 
+n = int(input("n qiymetini daxil edin:"))
+for i in range(1,n+1):
+    space = (n-i) * " "   
+    star = i * "*"       
+    print(space+star)
+
+#ikinci usul;
+for i in range(1, n+1):
+    #bosluqlar ucun;
+    for j in range(n-i):
+        print(" ", end="")
+    for j in range(i):
+        print("*", end="")
+    print();
+
+# Question 5:
+# n=5
+#     *     
+#    ***  
+#   *****    
+#  *******     
+# *********    
+
+n=int(input("n deyerini daxil edin:"))
+for i in range(1,n+1):
+    space = (n-i) * " "   
+    star = (2*i-1) * "*"  
+    print(space+star);
+
+# ikinci usul;
+n=int(input("n deyerini daxil edin:"))
+for i in range(1, n+1):
+    # bosluqlar ucun
+    for j in range(n-i):
+        print(" ", end="")
+    # ulduzlar ucun
+    for j in range((2*i-1)):
+        print("*", end="")
+    print();
+
+# Question 6:
+# n=5
+# *********  
+#  *******   
+#   *****   
+#    ***
+#     *
+n=int(input("n deyerini yazin:"))
+for i in range(1, n+1):
+    space = (i-1)*" "
+    star = (2*n-2*i+1)*"*"
+    print(space+star);
+
+# ikinci usul:
+n=int(input("n deyerini yazin:"))
+for i in range(1, n+1):
+    #bosluqlar ucun
+    for j in range(i-1):
+        print(" ", end="")
+    # ulduzlar ucun
+    for j in range(2*n-2*i+1):
+        print("*", end="")
+    print();
+
+# Question 7:
+# n=5
+#     *   
+#    ***   
+#   *****    
+#  *******    
+# *********   
+#  *******     
+#   *****    
+#    ***   
+#     *   
+
+n=int(input("n deyerini daxil edin:"))
+#birinci hisse
+for i in range(1, n+1):
+    #bosluqlar ucun
+    for j in range(n-i):
+        print(" ", end="")
+    # ulduzlar ucun
+    for j in range(2*i-1):
+        print("*", end="")
+    print()
+#ikinci hisse
+for i in range(1, n):
+    # bosluqlar ucun
+    for j in range(i):
+        print(" ", end="")
+    #ulduz ucun
+    for j in range(2*n-2*i -1):
+        print("*", end="")
+    print()
+
